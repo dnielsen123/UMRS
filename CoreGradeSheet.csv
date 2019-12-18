@@ -1,0 +1,459 @@
+Site,Plot,Tree #,Species,Spp,Pith Score,Match Score,Core Condition,Rings
+Bagley Bottoms,4,1,ASH,ACSA,C,B,A,43
+Bagley Bottoms,4,2,SM,ACSA,C,C,A,45
+Bagley Bottoms,4,3,SM,ACSA,B,A,B,41
+Bagley Bottoms,4,4,SM,ACSA,B,A,B,40
+Bagley Bottoms,4,5,SM,ACSA,B,A,B,47
+Bagley Bottoms,4,6,AE,ACSA,C,C,A,51
+Bagley Bottoms,4,7,SM,ACSA,A,C,A,47
+Bagley Bottoms,4,8,SM,ACSA,C,B,A,40
+Bagley Bottoms,4,9,SM,ACSA,C,C,B,45
+Bagley Bottoms,4,10,SM,ACSA,C,C,A,49
+Bagley Bottoms,4,11,SM,ACSA,,,,52
+Bagley Bottoms,4,12,SM,ACSA,B,C,B,41
+Bagley Bottoms,4,13,SM,ACSA,C,C,A,51
+Bagley Bottoms,4,14,SM,ULAM,B,C,B,45
+Bagley Bottoms,4,15,SM,ULAM,,,,45
+Bagley Bottoms,5,1,CW,ACSA,C,A,A,50
+Bagley Bottoms,5,2,SM,ULAM,A,B,A,47
+Bagley Bottoms,5,3,SM,ACSA,C,A,A,46
+Bagley Bottoms,5,4,SM,ACSA,A,C,B,48
+Bagley Bottoms,5,5,SM,ACSA,C,B,A,46
+Bagley Bottoms,5,6,SM,ACSA,C,B,B,45
+Bagley Bottoms,5,7,SM,ACSA,C,C,A,40
+Bagley Bottoms,5,8,SM,ACSA,B,,B,38
+Bagley Bottoms,5,9,CW,ULAM,C,B,C,48
+Bagley Bottoms,5,10,SM,ACSA,C,,B,52
+Bagley Bottoms,5,11,SM,ACSA,B,C,A,50
+Bagley Bottoms,10,1,SWO,FRPE,B,B,A,47
+Bagley Bottoms,10,2,SWO,ACSA,C,B,A,46
+Bagley Bottoms,10,3,HB,ACSA,A,B,B,48
+Bagley Bottoms,10,4,SWO,ACSA,B,C,B,46
+Bagley Bottoms,10,5,SWO,ACSA,A,A,B,48
+Bagley Bottoms,10,6,SM,FRPE,C,,B,48
+Bagley Bottoms,10,7,SM,ACSA,B,B,A,41
+Bagley Bottoms,10,8,SM,ACSA,B,C,B,45
+Bagley Bottoms,8,1,SM,FRPE,A,C,A,59
+Bagley Bottoms,8,2,SM,ULAM,C,C,A,49
+Bagley Bottoms,8,3,SM,ACSA,A,B,A,45
+Bagley Bottoms,8,4,SM,ACSA,C,C,A,47
+Bagley Bottoms,8,5,SM,ULAM,B,A,B,46
+Bagley Bottoms,8,6,SM,ACSA,,,,44
+Bagley Bottoms,8,7,AE,ULAM,C,B,B,49
+Bagley Bottoms,8,8,SM,ULAM,,,,45
+Bagley Bottoms,8,9,AE,FRPE,B,B,A,59
+Bagley Bottoms,7,1,?,ACSA,C,C,C,47
+Bagley Bottoms,7,2,ASH,ACSA,A,A,A,59
+Bagley Bottoms,7,3,SM,ACSA,C,C,B,37
+Bagley Bottoms,7,4,?,ACSA,C,B,C,73
+Bagley Bottoms,7,5,SM,ULAM,,,,58
+Bagley Bottoms,7,6,ASH,ACSA,C,B,A,64
+Bagley Bottoms,7,7,SM,ACSA,A,C,A,60
+Bagley Bottoms,7,8,SM,ACSA,C,C,A,61
+Bagley Bottoms,7,9,AE,ACSA,B,A,B,56
+Bagley Bottoms,7,10,AE,ACSA,A,A,A,NA
+Bagley Bottoms,7,11,AE,ACSA,C,B,A,65
+Bagley Bottoms,7,12,SM,ACSA,C,C,A,59
+Bagley Bottoms,7,13,SM,ACSA,,,,NA
+Bagley Bottoms,9,1,SM,ACSA,A,C,C,68
+Bagley Bottoms,9,2,SM,PODE,C,C,C,70
+Bagley Bottoms,9,3,SM,ACSA,C,B,A,64
+Bagley Bottoms,9,4,CW,ACSA,C,A,C,68
+Bagley Bottoms,9,5,SM,ACSA,C,C,A,66
+Bagley Bottoms,9,6,SM,ACSA,C,C,B,68
+Bagley Bottoms,9,7,AE,ACSA,A,A,B,66
+Bagley Bottoms,9,8,SM,ACSA,A,C,B,71
+Bagley Bottoms,9,9,SM,ACSA,B,,A,57
+Bagley Bottoms,9,10,SM,PODE,C,,A,70
+Bagley Bottoms,9,11,SM,ACSA,B,B,A,59
+Bagley Bottoms,9,12,SM,ACSA,B,C,A,62
+Bagley Bottoms,9,13,SM,?,C,B,A,62
+Bagley Bottoms,9,14,SM,FRPE,A,C,A,69
+Bagley Bottoms,9,15,SM,ACSA,B,B,A,65
+Bagley Bottoms,9,16,SM,?,C,C,A,63
+Bagley Bottoms,9,17,SM,ACSA,C,,B,NA
+Bagley Bottoms,9,18,SM,FRPE,C,C,A,66
+Bagley Bottoms,9,19,SM,ACSA,C,C,A,68
+Bagley Bottoms,2,1,AE,ACSA,C,,A,65
+Bagley Bottoms,2,2,AE,ULAM,C,B,A,66
+Bagley Bottoms,2,3,SM,ULAM,A,C,A,61
+Bagley Bottoms,2,4,AE,ULAM,A,B,A,64
+Bagley Bottoms,2,5,SM,ACSA,C,B,A,65
+Bagley Bottoms,2,6,SM,ACSA,A,A,A,NA
+Bagley Bottoms,2,7,SM,ACSA,C,C,A,79
+Bagley Bottoms,2,8,SM,ACSA,C,C,A,82
+Bagley Bottoms,2,9,SM,ACSA,C,A,A,89
+Bagley Bottoms,2,10,SM,ACSA,B,B,B,87
+Bagley Bottoms,2,11,AE,ACSA,A,C,A,80
+Bagley Bottoms,2,12,SM,ACSA,C,C,A,97
+Bagley Bottoms,2,13,SM,ULAM,C,C,A,39
+Bagley Bottoms,3,1,ASH,ACSA,C,B,A,NA
+Bagley Bottoms,3,2,SM,ULAM,C,B,A,65
+Bagley Bottoms,3,3,SM,ACSA,C,B,B,69
+Bagley Bottoms,3,4,SM,ACSA,C,C,B,75
+Bagley Bottoms,3,5,SM,ACSA,B,B,A,67
+Bagley Bottoms,3,6,ASH,PODE,B,,A,62
+Bagley Bottoms,3,7,SM,ACSA,C,,A,63
+Bagley Bottoms,3,8,SM,ACSA,C,,A,67
+Bagley Bottoms,3,9,ASH,ULAM,C,,C,84
+Bagley Bottoms,3,10,AE,ACSA,A,B,A,77
+Bagley Bottoms,3,11,SM,ACSA,C,C,A,71
+Bagley Bottoms,3,12,SM,ACSA,C,C,B,72
+Bagley Bottoms,3,13,AE,ACSA,C,C,B,72
+Bagley Bottoms,3,14,SM,ACSA,C,C,B,79
+Bagley Bottoms,3,15,AE,ACSA,C,B,A,81
+Bagley Bottoms,3,16,AE,ACSA,B,C,B,65
+Bagley Bottoms,1,1,SM,ACSA,C,B,A,79
+Bagley Bottoms,1,2,SM,ACSA,C,C,A,77
+Bagley Bottoms,1,3,SM,ACSA,C,C,A,66
+Bagley Bottoms,1,4,SM,ACSA,B,C,A,67
+Bagley Bottoms,1,5,SM,ACSA,B,B,A,82
+Bagley Bottoms,1,6,SM,QUBI,B,C,A,124
+Bagley Bottoms,1,7,SM,QUBI,A,B,B,96
+Bagley Bottoms,1,8,SM,CEOC,C,B,A,41
+Bagley Bottoms,1,9,SM,QUBI,B,C,B,79
+Bagley Bottoms,1,10,SM,QUBI,,,,131
+Bagley Bottoms,1,11,SM,ACSA,,,,79
+Bagley Bottoms,1,12,SM,ACSA,,,,71
+Bagley Bottoms,1,13,SM,ACSA,,,,89
+Goose Island,2,1,ASH,FRPE,B,A,B,70
+Goose Island,2,2,CW,PODE,,,,57
+Goose Island,2,3,CW,PODE,,,,64
+Goose Island,2,4,SM,ACSA,A,C,A,75
+Goose Island,2,5,ASH,FRPE,C,A,B,74
+Goose Island,2,6,SM,ACSA,C,B,C,63
+Goose Island,2,7,CW,PODE,C,C,C,70
+Goose Island,2,8,AE,ULAM,C,C,C,69
+Goose Island,2,9,CW,PODE,,,,NA
+Goose Island,2,10,SM,ACSA,C,B,B,60
+Goose Island,2,11,SM,ACSA,A,C,C,66
+Goose Island,2,12,SM,ACSA,B,B,B,74
+Goose Island,2,13,SM,ACSA,A,A,B,74
+Goose Island,2,14,SM,ACSA,C,B,B,65
+Goose Island,2,15,SM,ACSA,C,C,A,68
+Goose Island,2,16,SM,ACSA,,,,70
+Goose Island,2,17,CW,PODE,B,B,A,71
+Goose Island,2,18,SM,ACSA,,,,73
+Goose Island,5,1,ASH,FRPE,A,B,A,54
+Goose Island,5,2,ASH,BENI,C,B,C,NA
+Goose Island,5,3,BL,BENI,C,B,C,75
+Goose Island,5,4,BL,QUEL,B,B,C,67
+Goose Island,5,5,BL,FRPE,,,,85
+Goose Island,5,6,BL,FRPE,B,B,C,72
+Goose Island,5,7,ASH,FRPE,B,C,C,65
+Goose Island,9,1,SM,ROPS,A,C,B,27
+Goose Island,9,2,ASH,ROPS,B,C,C,34
+Goose Island,9,3,ASH,ROPS,C,,B,NA
+Goose Island,9,4,ASH,ROPS,A,,B,32
+Goose Island,9,5,OAK,FRPE,C,C,B,66
+Goose Island,9,6,HB,QUBI,,,,54
+Goose Island,9,7,ASH,FRPE,B,B,A,53
+Goose Island,9,8,HB,BENI,,,,66
+Goose Island,9,9,ASH,BENI,B,B,B,44
+Goose Island,9,10,ASH,BENI,A,A,B,44
+Goose Island,9,11,ASH,BENI,A,B,A,43
+Goose Island,9,12,HB,BENI,B,C,C,40
+Goose Island,12,1,ASH,BENI,B,B,A,38
+Goose Island,12,2,ASH,BENI,C,B,A,37
+Goose Island,12,3,OAK,BENI,C,B,C,41
+Goose Island,12,4,RB,BENI,,,,38
+Goose Island,12,5,OAK,ACSA,C,A,A,39
+Goose Island,12,6,ASH,FRPE,C,B,A,38
+Goose Island,12,7,RB,FRPE,,,,29
+Goose Island,12,8,RB,FRPE,,,,33
+Goose Island,14,1,ASH,QUEL,A,B,B,84
+Goose Island,14,2,SWO,CEOC,A,A,A,NA
+Goose Island,14,3,SWO,FRPE,C,B,C,40
+Goose Island,14,4,SWO,CEOC,C,A,A,39
+Goose Island,14,5,HB,FRPE,B,A,C,100
+Goose Island,14,6,OAK,FRPE,C,C,B,40
+Goose Island,14,7,ASH,FRPE,A,B,A,70
+Goose Island,14,8,ASH,CEOC,B,B,B,36
+Goose Island,14,9,ASH,BENI,,,,62
+Goose Island,10,1,RB,BENI,,,,46
+Goose Island,10,2,RB,ACNE,,,,28
+Goose Island,10,3,BE,BENI,B,,B,52
+Goose Island,10,4,RB,FRPE,,,,37
+Goose Island,10,5,ASH,BENI,B,,C,61
+Goose Island,10,6,RB,CEOC,,,,34
+Goose Island,10,7,HB,FRPE,C,B,C,75
+Goose Island,13,1,RB,FRPE,,,,74
+Goose Island,13,2,OAK,QUEL,A,C,B,47
+Goose Island,13,3,OAK,BENI,A,B,B,61
+Goose Island,13,4,OAK,QUEL,B,B,B,47
+Goose Island,13,5,OAK,FRPE,B,A,B,64
+Goose Island,13,6,OAK,BENI,C,A,B,62
+Goose Island,13,7,SWO,BENI,C,C,C,66
+Goose Island,13,8,AE,BENI,B,B,C,30
+Goose Island,13,9,SWO,QUEL,C,B,C,73
+Goose Island,6,1,SWO,QUEL,B,A,B,70
+Goose Island,6,2,ASH,QUEL,B,B,A,75
+Goose Island,6,3,RB,QUEL,,,,74
+Goose Island,6,4,RB,QUEL,,,,75
+Goose Island,6,5,RB,QUBI,,,,90
+Goose Island,6,6,RB,ULAM,,,,55
+Goose Island,6,7,RB,QUBI,,,,117
+Goose Island,6,8,RB,FRPE,,,,76
+Goose Island,6,9,RB,QUBI,,,,76
+Goose Island,6,10,RB,QUBI,,,,78
+Goose Island,6,11,RB,QUBI,,,,75
+Goose Island,4,1,ASH,CEOC,B,A,B,35
+Goose Island,4,2,RB,QUEL,,,,83
+Goose Island,4,3,RB,FRPE,C,,B,76
+Goose Island,4,4,OAK,FRPE,C,C,B,71
+Goose Island,4,5,ASH,FRPE,A,B,B,73
+Goose Island,15,1,ASH,FRPE,B,B,B,36
+Goose Island,15,2,RB,BENI,A,,A,45
+Goose Island,15,3,RB,BENI,B,,A,NA
+Goose Island,15,4,ASH,FRPE,B,,C,41
+Goose Island,15,5,OAK,QUEL,,,,33
+Goose Island,15,6,RB,BENI,,,,NA
+Goose Island,15,7,RB,BENI,A,A,A,48
+Goose Island,15,8,OAK,QUEL,,,,36
+Goose Island,15,9,RB,BENI,,,,45
+Goose Island,15,10,RB,BENI,,,,37
+Goose Island,15,11,RB,BENI,,,,NA
+Goose Island,15,12,RB,BENI,,,,37
+Goose Island,15,13,RB,BENI,,,,NA
+Goose Island,15,14,RB,BENI,,,,NA
+Goose Island,15,15,RB,BENI,,,,41
+Goose Island,15,16,RB,BENI,,,,39
+Great River Harbor,1,1,SM,ACSA,A,B,A,25
+Great River Harbor,1,2,SM,ACSA,B,B,C,17
+Great River Harbor,1,3,SM,ACSA,A,B,B,32
+Great River Harbor,1,4,SM,ACSA,C,C,C,50
+Great River Harbor,1,5,SM,ACSA,C,C,B,40
+Great River Harbor,1,6,SM,ACSA,C,B,B,43
+Great River Harbor,1,7,SM,ACSA,B,C,A,34
+Great River Harbor,1,8,SM,ACSA,A,C,B,38
+Great River Harbor,1,9,ASH,FRPE,A,B,B,36
+Great River Harbor,1,10,SM,ACSA,B,B,C,45
+Great River Harbor,1,11,ASH,FRPE,B,B,A,40
+Great River Harbor,1,12,AE,ULAM,A,C,B,66
+Great River Harbor,1,13,ASH,FRPE,,,,41
+Great River Harbor,1,14,ASH,FRPE,,,,32
+Great River Harbor,2,1,ASH,FRPE,C,A,A,70
+Great River Harbor,2,2,CW,PODE,B,A,C,71
+Great River Harbor,2,3,CW,PODE,B,C,C,62
+Great River Harbor,2,4,BE,ACNE,A,A,B,41
+Great River Harbor,2,5,ASH,FRPE,A,,B,44
+Great River Harbor,2,6,SM,ACSA,B,B,B,73
+Great River Harbor,2,7,SM,ACSA,A,,A,48
+Great River Harbor,2,8,BE,ACNE,,,,NA
+Great River Harbor,2,9,SM,ACSA,C,C,B,73
+Great River Harbor,2,10,SM,ACSA,C,,A,70
+Great River Harbor,2,11,SM,ACSA,C,C,B,58
+Great River Harbor,2,12,SM,ACSA,B,C,B,74
+Great River Harbor,3,1,SM,ACSA,B,,A,76
+Great River Harbor,3,2,SM,ACSA,A,B,A,80
+Great River Harbor,3,3,SM,ACSA,B,B,B,68
+Great River Harbor,3,4,SM,ACSA,C,B,B,72
+Great River Harbor,3,5,SM,ACSA,B,C,C,79
+Great River Harbor,3,6,SM,ACSA,B,,B,81
+Great River Harbor,3,7,ASH,FRPE,B,A,A,79
+Great River Harbor,3,8,SM,ACSA,B,C,B,72
+Great River Harbor,3,9,SM,ACSA,C,,A,65
+Great River Harbor,3,10,SM,ACSA,B,B,A,79
+Great River Harbor,3,11,SM,ACSA,C,C,C,75
+Great River Harbor,3,12,CW,PODE,C,C,C,68
+Great River Harbor,3,13,SM,ACSA,C,A,C,63
+Great River Harbor,3,14,CW,PODE,,,,67
+Great River Harbor,4,1,BW,TIAM,C,B,B,96
+Great River Harbor,4,2,SM,ACSA,C,B,B,105
+Great River Harbor,4,3,ASH,FRPE,B,A,B,77
+Great River Harbor,4,4,SM,ACSA,C,B,B,99
+Great River Harbor,4,5,BW,TIAM,C,B,A,33
+Great River Harbor,4,6,BW,TIAM,B,B,A,16
+Great River Harbor,4,7,OAK,QUEL,B,A,A,128
+Great River Harbor,4,8,BW,TIAM,,,,51
+Indian Slough,2,1,AE,BENI,B,C,C,20
+Indian Slough,2,2,ASH,CEOC,B,C,A,42
+Indian Slough,2,3,ASH,BENI,,,,18
+Indian Slough,2,4,ASH,BENI,C,A,B,20
+Indian Slough,2,5,CW,BENI,,,,NA
+Indian Slough,2,6,SM,CEOC,C,C,B,36
+Indian Slough,2,7,SM,ACSA,,,,91
+Indian Slough,3,1,HB,CEOC,C,C,C,42
+Indian Slough,3,2,SM,CEOC,,,,43
+Indian Slough,3,3,SM,ACSA,C,A,B,112
+Indian Slough,3,4,SM,ACSA,C,A,C,114
+Indian Slough,3,5,ASH,ULAM,C,B,C,51
+Indian Slough,3,6,HB,FRPE,,,,98
+Indian Slough,3,7,HB,FRPE,B,A,B,97
+Indian Slough,3,8,HB,FRPE,A,,B,NA
+Indian Slough,3,9,ASH,PODE,,,,112
+Indian Slough,3,10,HB,ACSA,A,B,C,NA
+Indian Slough,3,11,HB,ACSA,A,C,B,92
+Indian Slough,4,1,SM,CEOC,C,A,B,38
+Indian Slough,4,2,SM,ACSA,C,B,B,NA
+Indian Slough,4,3,SM,ACSA,A,B,B,82
+Indian Slough,4,4,SM,ACSA,C,C,C,99
+Indian Slough,4,5,ASH,FRPE,,,,100
+Indian Slough,4,6,SM,CEOC,A,A,A,39
+Indian Slough,4,7,SM,CEOC,A,C,B,44
+Indian Slough,4,8,SM,CEOC,C,B,A,76
+Indian Slough,4,9,ASH,FRPE,C,B,C,NA
+Indian Slough,4,10,HB,CEOC,A,B,A,42
+Indian Slough,1,1,RB,CEOC,A,C,A,40
+Indian Slough,1,2,HB,ACSA,A,A,B,52
+Indian Slough,1,3,RB,ACSA,A,A,B,70
+Indian Slough,1,4,RB,ACSA,A,B,A,68
+Indian Slough,1,5,RB,ACSA,,,,73
+Indian Slough,1,6,HB,FRPE,B,A,B,NA
+Indian Slough,1,7,SM,ACSA,C,C,C,75
+Indian Slough,1,8,HB,ACSA,B,A,A,78
+Indian Slough,1,9,HB,ACSA,A,B,B,62
+Indian Slough,1,10,SM,FRPE,C,A,B,47
+Indian Slough,1,11,SM,CEOC,C,B,A,77
+Lake Rebecca,1,1,CW,PODE,C,C,C,63
+Lake Rebecca,1,2,BE,ACNE,B,B,A,44
+Lake Rebecca,1,3,BE,ACNE,C,,C,37
+Lake Rebecca,1,4,AE,ULAM,C,C,B,63
+Lake Rebecca,1,5,CW,PODE,B,,B,52
+Lake Rebecca,1,6,CW,PODE,B,C,C,63
+Lake Rebecca,1,7,CW,PODE,C,B,C,62
+Lake Rebecca,1,8,CW,PODE,C,,A,63
+Lake Rebecca,1,9,ASH,FRPE,C,A,C,64
+Lake Rebecca,1,10,ASH,FRPE,C,A,B,71
+Lake Rebecca,1,11,ASH,FRPE,C,,C,53
+Lake Rebecca,1,12,CW,PODE,C,B,C,63
+Lake Rebecca,1,13,CW,PODE,,,,NA
+Lake Rebecca,1,14,AE,ULAM,B,B,C,49
+Lake Rebecca,1,15,AE,ULAM,C,B,C,NA
+Lake Rebecca,1,16,CW,PODE,,,,NA
+Lake Rebecca,1,17,AE,ULAM,B,B,C,NA
+Lake Rebecca,1,18,CW,PODE,B,C,C,65
+Lake Rebecca,1,19,CW,PODE,C,C,A,76
+Lake Rebecca,1,20,CW,PODE,C,C,C,38
+Lake Rebecca,2,1,SM,ACSA,A,,B,63
+Lake Rebecca,2,2,SM,ACSA,B,B,A,63
+Lake Rebecca,2,3,SM,ACSA,,,,50
+Lake Rebecca,2,4,SM,ACSA,A,,A,62
+Lake Rebecca,2,5,SM,ACSA,B,,B,67
+Lake Rebecca,2,6,ASH,FRPE,A,A,B,67
+Lake Rebecca,2,7,SM,ACSA,A,B,B,64
+Lake Rebecca,2,8,SM,ACSA,C,C,B,62
+Lake Rebecca,2,9,SM,ACSA,A,C,C,64
+Lake Rebecca,2,10,SM,ACSA,C,,B,71
+Lake Rebecca,2,11,SM,ACSA,A,,B,61
+Lake Rebecca,2,12,SM,ACSA,,,,NA
+Lake Rebecca,2,13,SM,ACSA,B,,B,65
+Lake Rebecca,2,14,SM,ACSA,A,C,C,NA
+Lake Rebecca,2,15,SM,ACSA,A,C,A,60
+Lake Rebecca,2,16,SM,ACSA,B,,B,59
+Lake Rebecca,2,17,SM,ACSA,C,B,C,57
+Lake Rebecca,2,18,SM,ACSA,C,,B,57
+Lake Rebecca,2,19,SM,ACSA,A,B,C,63
+Lake Rebecca,2,20,SM,ACSA,C,B,C,48
+Lake Rebecca,2,21,SM,ACSA,B,,B,59
+Lake Rebecca,2,22,SM,ACSA,C,C,C,55
+Lake Rebecca,2,23,SM,ACSA,A,B,B,60
+Lake Rebecca,2,24,SM,ACSA,C,,B,54
+Lake Rebecca,2,25,SM,ACSA,A,C,A,64
+Lake Rebecca,2,26,SM,ACSA,,,,64
+Lake Rebecca,2,27,AE,ULAM,,,,NA
+Lake Rebecca,2,28,SM,ACSA,B,B,C,63
+Lake Rebecca,2,29,SM,ACSA,C,C,B,59
+Lake Rebecca,2,30,CW,PODE,C,C,B,101
+Lake Rebecca,3,1,SM,ACSA,B,C,C,62
+Lake Rebecca,3,2,SM,ACSA,B,C,B,66
+Lake Rebecca,3,3,ASH,FRPE,C,,C,67
+Lake Rebecca,3,4,ASH,FRPE,B,,B,76
+Lake Rebecca,3,5,ASH,FRPE,C,B,C,88
+Lake Rebecca,3,6,ASH,FRPE,C,B,B,76
+Lake Rebecca,3,7,ASH,FRPE,A,C,C,85
+Lake Rebecca,3,8,SM,ACSA,,,,NA
+Lake Rebecca,3,9,ASH,FRPE,B,A,B,104
+Lake Rebecca,3,10,SM,ACSA,A,C,B,64
+Lake Rebecca,3,11,CW,PODE,C,B,B,66
+Lake Rebecca,3,12,SM,ACSA,C,C,C,61
+Lake Rebecca,3,13,SM,ACSA,C,,B,58
+Lake Rebecca,3,14,CW,PODE,C,B,C,63
+Lake Rebecca,3,15,SM,ACSA,A,B,C,68
+Lake Rebecca,3,16,SM,ACSA,C,C,B,61
+Lake Rebecca,3,17,SM,ACSA,A,B,B,66
+Lake Rebecca,3,18,SM,ACSA,A,C,C,67
+Lake Rebecca,3,19,SM,ACSA,B,C,C,59
+Lake Rebecca,3,20,CW,PODE,C,,B,60
+Lake Rebecca,3,21,SM,ACSA,C,C,B,59
+Lake Rebecca,3,22,SM,ACSA,C,,C,55
+Lake Rebecca,4,1,SM,ACSA,A,C,B,72
+Lake Rebecca,4,2,SM,ACSA,B,C,B,66
+Lake Rebecca,4,3,CW,PODE,C,B,B,63
+Lake Rebecca,4,4,ASH,FRPE,C,B,B,61
+Lake Rebecca,4,5,AE,ULAM,C,,C,61
+Lake Rebecca,4,6,SM,ACSA,C,C,C,69
+Lake Rebecca,4,7,AE,ULAM,A,B,B,68
+Lake Rebecca,4,8,SM,ACSA,C,,A,69
+Lake Rebecca,4,9,ASH,FRPE,A,A,A,72
+Lake Rebecca,4,10,CW,PODE,C,B,C,59
+Lake Rebecca,4,11,SM,ACSA,A,B,B,67
+Lake Rebecca,4,12,SM,ACSA,B,C,B,66
+Lake Rebecca,4,13,ASH,FRPE,A,A,B,71
+Lake Rebecca,4,14,CW,PODE,C,B,C,69
+Lake Rebecca,4,15,SM,ACSA,A,B,C,68
+Lake Rebecca,4,16,ASH,FRPE,A,B,B,45
+Lake Rebecca,4,17,CW,PODE,C,B,C,73
+Lake Rebecca,4,18,ASH,FRPE,A,A,C,71
+Lake Rebecca,4,19,ASH,FRPE,A,A,C,67
+Lake Rebecca,4,20,ASH,FRPE,C,B,B,67
+Lake Rebecca,4,21,SM,ACSA,,,,69
+Lake Rebecca,5,1,AE,ULAM,,,,NA
+Lake Rebecca,5,2,CW,PODE,C,C,C,71
+Lake Rebecca,5,3,CW,PODE,C,B,C,65
+Lake Rebecca,5,4,CW,PODE,C,C,B,73
+Lake Rebecca,5,5,SM,ACSA,A,C,C,68
+Lake Rebecca,5,6,CW,PODE,C,C,B,71
+Lake Rebecca,5,7,CW,PODE,C,B,C,68
+Lake Rebecca,5,8,SM,ACSA,B,C,B,67
+Lake Rebecca,5,9,ASH,FRPE,B,B,C,29
+Lake Rebecca,5,10,AE,ULAM,B,A,C,41
+Lake Rebecca,5,11,SM,ACSA,A,C,B,59
+McNally's Landing,2,1,HB,FRPE,C,B,B,60
+McNally's Landing,2,2,HB,FRPE,C,A,B,33
+McNally's Landing,2,3,HB,FRPE,B,A,B,49
+McNally's Landing,2,4,AE,FRPE,B,A,A,61
+McNally's Landing,2,5,AE,FRPE,B,B,A,50
+McNally's Landing,2,6,HB,FRPE,C,A,B,39
+McNally's Landing,2,7,AE,FRPE,B,B,B,59
+McNally's Landing,2,8,HB,FRPE,B,A,B,47
+McNally's Landing,2,9,HB,FRPE,B,A,A,42
+McNally's Landing,2,10,HB,FRPE,A,C,A,58
+McNally's Landing,2,11,ASH,FRPE,,,,52
+McNally's Landing,2,12,ASH,FRPE,,,,51
+McNally's Landing,1,1,ASH,FRPE,C,B,B,49
+McNally's Landing,1,2,ASH,FRPE,C,A,C,49
+McNally's Landing,1,3,ASH,FRPE,C,,B,55
+McNally's Landing,1,4,ASH,FRPE,A,A,A,51
+McNally's Landing,1,5,ASH,FRPE,C,B,A,51
+McNally's Landing,1,6,ASH,FRPE,A,B,A,52
+McNally's Landing,1,7,ASH,CEOC,A,C,C,36
+McNally's Landing,1,8,ASH,CEOC,B,A,A,36
+McNally's Landing,1,9,ASH,CEOC,C,A,A,53
+McNally's Landing,1,10,ASH,ULAM,C,A,A,36
+McNally's Landing,1,11,ASH,ULAM,A,A,A,34
+McNally's Landing,1,12,ASH,CEOC,A,B,A,34
+McNally's Landing,1,13,ASH,ULAM,C,B,A,34
+McNally's Landing,1,14,ASH,CEOC,B,B,B,52
+McNally's Landing,1,15,ASH,CEOC,C,A,A,36
+McNally's Landing,1,16,ASH,CEOC,B,C,B,46
+McNally's Landing,1,17,ASH,FRPE,,,,78
+McNally's Landing,1,18,ASH,FRPE,,,,70
+Minnesota City Boat Club,2,1,CW,TIAM,C,C,C,60
+Minnesota City Boat Club,2,2,CW,ULAM,C,A,C,21
+Minnesota City Boat Club,2,3,SM,FRPE,C,B,A,76
+Minnesota City Boat Club,2,4,SM,FRPE,B,,C,63
+Minnesota City Boat Club,2,5,SM,PODE,B,,A,74
+Minnesota City Boat Club,2,6,CW,FRPE,B,B,C,39
+Minnesota City Boat Club,2,7,SM,PODE,B,,A,74
+Minnesota City Boat Club,2,8,SM,PODE,C,B,C,75
+Minnesota City Boat Club,2,9,SM,ACSA,B,C,A,74
+Minnesota City Boat Club,2,10,CW,ACSA,A,A,A,76
+Minnesota City Boat Club,2,11,AE,ACSA,C,B,A,78
+Minnesota City Boat Club,2,12,CW,PODE,,,,82
+Minnesota City Boat Club,1,1,BW,ACSA,B,C,C,76
+Minnesota City Boat Club,1,2,AE,ACSA,B,A,B,79
+Minnesota City Boat Club,1,3,ASH,ACSA,A,B,A,72
+Minnesota City Boat Club,1,4,ASH,PODE,B,B,B,74
+Minnesota City Boat Club,1,5,CW,ULAM,C,B,C,52
+Minnesota City Boat Club,1,6,ASH,PODE,C,A,A,81

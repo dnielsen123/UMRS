@@ -1,0 +1,152 @@
+Site ID,Core ID,Species,Skeleton (Y/N),Measured (Y/N),Innermost Year,Notes
+LR,0306B,ASH,,,1942,
+LR,0305A,ASH,,,1935,
+LR,0206A,ASH,,,1949,
+LR,0202A,SM,,,1956,"""injuries"": 1970s, 1960s"
+LR,0215A,SM,,,1964,"""injuries"": 2000s"
+LR,0321A,SM,,,1963,"""injuries"": 1990s, 1980s"
+LR,0309A,ASH,,,1914,
+LR,0222A,SM,,,1974,"""injuries"": 1990s, 1980s"
+LR,0420B,SM,,,1955,"""injuries"": 1970s, 1980s"
+LR,0420A,SM,,,1949,"""injuries"": 1990s, 1970s, 1960s, 1950s"
+LR,0216B,SM,,,1959,"""injuries"": 1970s, 1960s"
+LR,0505B,SM,,,1950,"""injuries"": 1970s, 1960s, 1950s"
+LR,0415A,SM,,,1946,"""injuries"": 1990s, 1970s, 1960s, 1950s"
+LR,0508B,SM,,,1946,"""injuries"": 1990s, 1980s, 1970s, 1950s"
+LR,0223B,SM,,,1958,"""injuries"": 1980s"
+LR,0218B,SM,,,1964,"""injuries"": 1960s"
+LR,0110B,ASH,,,1950,
+LR,0211B,SM,,,1962,"""injuries"": 1980s, 1970s"
+LR,0229A,SM,,,1960,"""injuries"": 1990s, 1970s, 1960s"
+LR,0406A,SM,,,1962,"""injuries"": 1980s, 1970s, 1960s"
+LR,0208B,SM,,,1962,"""injuries"": 2010s, 1980s, 1960s"
+LR,0206B,ASH,,,1957,
+LR,0211A,SM,,,1956,"""injuries"": 1990s, 1960s"
+LR,0318B,SM,,,1963,"""injuries"": 1980s, 1970s"
+LR,0111A,ASH,,,1967,
+LR,0210B,SM,,,1962,"""injures"": 1960s, 1970s"
+LR,0202B,SM,,,1960,"""injures"": 1960s"
+LR,0304A,ASH,,,1947,
+LR,0222B,SM,,,1974,"""injuries"": 1980s, 1970s"
+LR,0218A,SM,,,1960,"""injuries"": 1990s, 1980s, 1970s, 1960s"
+LR,0224A,SM,,,1967,"""injuries"": 1980s, 1970s"
+LR,0225B,SM,,,1956,"""injuries"": 2000s, 1990s"
+LR,0415B,SM,,,1955,"""injuries"": 1990s, 1980s, 1970s, 1960s, 1950s"
+LR,0411B,SM,,,1947,"""injuries"": 1980s, 1970s"
+LR,0219B,SM,,,1954,"""injuries"": 1990s, 1970s, 1960s"
+LR,0110A,ASH,,,1946,
+LR,010XB,,,,1947,
+LR,0201B,SM,,,1955,"""injuries"": 1990s, 1980s, 1970s"
+LR,0509B,ASH,,,1990,
+LR,0316A,SM,,,1960,"""injuries"": 1970s, 1960s"
+LR,0408B,SM,,,1950,"""injuries"": 1990s, 1970s, 1960s, 1950s"
+LR,0231B,SM,,,1966,"""injuries"": 1970s"
+LR,0217B,SM,,,1969,"""injuries"": 1990s, 1980s"
+LR,0215B,SM,,,1957,
+LR,0317A,SM,,,1954,"""injuries"": 1970s"
+LR,010X,,,,1951,
+LR,0409B,ASH,,,1948,
+LR,0316B,SM,,,1956,"""injuries"": 1970s, 1960s"
+LR,0305B,ASH,,,1942,
+LR,0312A,SM,,,1956,"""injuries"": 1970s, 1960s"
+LR,0309B,ASH,,,1953,
+LR,0315A,SM,,,1966,"""injuries"": 1990s, 1980s, 1970s"
+LR,0205A,SM,,,1949,"""injuries"": 2010s, 1990s"
+LR,0208A,SM,,,1954,"""injuries"": 1970s, 1960s"
+LR,0213A,SM,,,1951,"""injuries"": 1990s"
+LR,0231A,SM,,,1974,
+LR,0505A,SM,,,1947,"""injuries"": 1990s, 1970s, 1960s, 1950s"
+LR,0306A,ASH,,,1941,
+LR,0232A,SM,,,1954,"""injuries"": 1990s"
+LR,0402B,SM,,,1950,
+LR,0412B,SM,,,1966,
+LR,0319B,SM,,,1963,"""injuries"": 2000s, 1990s, 1980s"
+LR,0232B,SM,,,1953,"""injuries"": 2000s, 1990s"
+LR,0412A,SM,,,1950,
+LR,0220A,SM,,,1969,"""injuries"": 1990s"
+LR,0228B,SM,,,1963,"""injuries"": 1990s, 1980s, 1960s"
+LR,0207B,SM,,,1959,"""injuries"": 1980s"
+LR,0402A,SM,,,1956,"""injuries"": 2010s"
+LR,0225A,SM,,,1958,"""injuries"": 2000s, 1990s, 1980s"
+LR,0509A,ASH,,,1989,
+LR,0413A,ASH,,,1947,
+LR,0204A,SM,,,1954,
+LR,0409A,ASH,,,1948,
+LR,0201A,SM,,,1960,"""injuries"": 2000s, 1990s, 1980s"
+LR,0207A,SM,,,1955,"""injuries"": 1980s"
+IS,0204A,CW,,,1918,
+IS,0308A,HB,,,1941,
+IS,0204B,CW,,,1914,
+IS,0202B,ASH,,,1920,Split trunk
+IS,0305B,ASH,,,1922,
+IS,0304A,SM,,,1929,
+IS,0304B,SM,,,1923,
+IS,0305A,ASH,,,1926,
+BC,0105A,CW,,,1948,
+BC,0202A,CW,,,1945,
+BC,0209A,CW,,,1946,
+BC,0101B,HB,,,1972,
+BC,0101A,HB,,,1955,
+BC,0106B,ASH,,,1984,
+BC,0207B,SM,,,1943,"""injuries"": 2000s, 1940s"
+ML,0205B,HB,,,1982,
+ML,0207B,HB,,,1980,
+ML,0110B,ASH,,,1970,
+ML,0201B,HB,,,1985,
+ML,0107A,ASH,,,1970,
+ML,0202B,HB,,,1987,
+ML,0208A,HB,,,1980,
+ML,0202A,HB,,,1981,
+ML,0115B,ASH,,,1968,
+ML,0109B,ASH,,,1966,
+ML,0102B,ASH,,,1985,
+ML,0204A,ELM,,,1981,
+ML,0101B,ASH,,,1957,
+ML,0116B,ELM,,,1978,
+ML,0206A,ELM,,,1987,
+ML,0106A,ASH,,,1958,
+ML,0111B,ASH,,,1970,
+ML,0115A,ASH,,,1966,
+ML,0112A,ASH,,,1969,
+ML,0203A,HB,,,1986,
+ML,0207A,HB,,,1965,
+ML,0114B,ASH,,,1965,
+ML,0208B,HB,,,1984,
+ML,0103A,ASH,,,1968,
+ML,0101A,ASH,,,1965,
+ML,0106B,ASH,,,1967,
+BB,0412A,SM,,,1955,"""injuries"": 2000s, 1990s, 1980s, 1960s, 1950s"
+BB,0509B,CW,,,1941,
+BB,0311A,SM,,,1979,"""injuries"": 2010s, 2000s, 1980s, 1970s"
+BB,0412B,SM,,,1947,"""injuries"": 2000s, 1990s, 1980s, 1960s, 1950s, 1940s"
+BB,0108B,SM,,,1964,"""injuries"": 1970s, 1960s"
+BB,0919A,SM,,,1933,"""injuries"": 2010s, 1990s, 1980s, 1960s, 1950s"
+BB,0707B,SM,,,1951,"""injuries"": 1970s, 1960s, 1950s"
+BB,0309B,ASH,,,1954,
+BB,0509A,CW,,,1940,
+BB,0914B,SM,,,1938,"""injuries"": 2000s, 1990s, 1980s, 1960s, 1950s"
+BB,0304B,SM,,,1970,"""injuries"": 1970s"
+BB,0306A,ASH,,,1978,
+BB,0302B,SM,,,1972,"""injuries"": 2000s, 1980s"
+BB,0411B,SM,,,1963,"""injuries"": 1990s, 1970s, 1960s"
+BB,0802A,SM,,,1947,"""injuries"": 2010s, 2000s, 1990s, 1980s, 1970s, 1960s, 1950s, 1940s"
+BB,0311B,SM,,,1978,"""injuries"": 1990s, 1980s, 1970s"
+BB,0209A,SM,,,1977,"""injuries"": 1980s, 1970s"
+BB,0708A,SM,,,1960,"""injuries"": 1970s, 1960s"
+BB,0205A,SM,,,1974,"""injuries"": 1990s, 1980s, 1970s"
+BB,0316B,ELM,,,1976,
+BB,0203B,SM,,,1970,"""injuries"": 1990s, 1980s"
+BB,0909B,SM,,,1946,"""injuries"": 1970s, 1960s"
+BB,0704B,Unknown,,,1953,
+BB,0712B,SM,,,1967,"""injuries"": 2000s, 1970s, 1960s"
+BB,0210B,SM,,,1986,"""injuries"": 2000s, 1990s"
+BB,0213B,SM,,,1970,"""injuries"": 1980s, 1970s"
+BB,0203A,SM,,,1972,"""injuries"": 1990s, 1980s"
+BB,0102B,SM,,,1985,"""injuries"": 2010s, 2000s"
+BB,0202B,ELM,,,1976,
+BB,0109A,SM,,,1981,"""injuries"": 1980s"
+BB,0315B,ELM,,,1980,
+BB,0202A,ELM,,,1975,
+BB,0106B,SM,,,1977,"""injuries"": 1980"
+BB,0907A,ELM,,,1953,
+BB,1003B,HB,,,1979,

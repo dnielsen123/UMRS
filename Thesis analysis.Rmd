@@ -1,0 +1,463 @@
+---
+title: "Thesis Analysis"
+author: "Daniel Nielsen"
+date: "Ongoing"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(RColorBrewer)
+library(tidyverse)
+library(plyr)
+library(dplyr)
+library(leaps)
+library(dplR)
+library(formattable)
+library(vegan)
+library(BAMMtools)
+```
+
+Question 1: How does species composition and stand structure vary within and among mixed-silver maple forests in the Upper Mississippi River floodplain?
+
+```{r 1a}
+##How does species composition and stand structure vary within and among sites in terms of BA, TPA, IV, and diameter distributions?
+data=read.csv("IVBA.csv")
+data=read.csv("IVBA4.csv")
+data$TPA=data$Count*10
+bb=subset(data, Site=='Bagley')
+gi=subset(data, Site=='Goose Island')
+gr=subset(data, Site=='Great River Harbor')
+is=subset(data, Site=='Indian Slough')
+ml=subset(data, Site=="McNally's Landing")
+bc=subset(data, Site=='MCBC')
+lr=subset(data, Site=='Lake Rebecca')
+
+##variations in IV, BA, and TPA among sites
+data2=ddply(data, c("Site","Species"),summarise,N=length(IV),mean=mean(IV),sd=sd(IV),se=sd/sqrt(N))
+
+ggplot(data2, aes(Species, mean, fill=Species))+geom_col()+facet_wrap(data2$Site)+theme(axis.title.x = element_blank(), axis.ticks.x = element_blank(), axis.text.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+ylab("Importance Value")+geom_errorbar(aes(ymin=(mean-se), ymax=(mean+se)), width=0.25)
+#ggplot(data, aes(Site, IV))+geom_boxplot()+facet_wrap(data$Species)+ggtitle("Species Importance Value Among Sites")
+ggplot(data, aes(Species, BA, fill=Species))+geom_boxplot()+facet_wrap(data$Site)+ggtitle("Species Basal Area Among Sites")+theme(axis.title.x = element_blank(), axis.ticks.x = element_blank(), axis.text.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+ylab("Basal Area (sq. ft./acre")
+#ggplot(data, aes(Site, BA))+geom_boxplot()+facet_wrap(data$Species)+ggtitle("Species Basal Area Among Sites")
+ggplot(data, aes(Species, TPA))+geom_boxplot()+facet_wrap(data$Site)+ggtitle("Species Trees Per Acre Among Sites")
+#ggplot(data, aes(Site, TPA))+geom_boxplot()+facet_wrap(data$Species)+ggtitle("Species Trees Per Acre Among Sites")
+
+##TPA~BA
+data=read.csv("PlotSumm2Ord.csv")
+ggplot(data, aes(tpatot,batot))+geom_point()+geom_smooth(method='lm')+facet_wrap(data$Site)
+
+##Diameter distribution by species
+data=read.csv("821data.csv")
+data=read.csv("821data2.csv")
+acne=subset(data, species=='ACNE')
+acsa=subset(data, species=='ACSA')
+beni=subset(data, species=='BENI')
+ceoc=subset(data, species=='CEOC')
+frpe=subset(data, species=='FRPE')
+pode=subset(data, species=='PODE')
+qubi=subset(data, species=='QUBI')
+quel=subset(data, species=='QUEL')
+rops=subset(data, species=='ROPS')
+ulam=subset(data, species=='ULAM')
+tiam=subset(data, species=='TIAM')
+bb=subset(data, site=="Bagley Bottoms")
+mlbc=subset(data, site==c("McNally's Landing","Minnesota City Boat Club"))
+gr=subset(data, site=="Great River Harbor")
+is=subset(data, site=="Indian Slough")
+gi=subset(data, site=="Goose Island")
+lr=subset(data, site=="Lake Rebecca")
+data2=ddply(data, c("site","species","dbhclass"),summarise,N=length(tpa),mean=mean(tpa),sd=sd(tpa),se=sd/sqrt(N))
+
+ggplot(data2, aes(dbhclass, mean, fill=species))+geom_col()+facet_wrap(data2$site)+theme(axis.title.x = element_text(size=25), axis.ticks.x = element_blank(), axis.text.x = element_text(size=20), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+ylab("Trees Per Acre")+xlab("Diameter Class")
+
+ggplot(data, aes(dbhclass))+geom_histogram(binwidth=1, aes(fill=data$species))+facet_wrap(data$site)+theme(axis.title.x = element_text(size=25), axis.ticks.x = element_blank(), axis.text.x = element_text(size=20), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+labs(fill="Species")+xlab("Diameter Class")
+
+data2=group_by(data, site, species, dbhclass)
+data_prop=summarize(data2, count.n=n())
+data3=group_by(data, site)
+dsum=summarize(data3, sum.trees=n())
+d4=merge(dsum, data_prop, by=c("site"))
+d4$tprop=d4$count.n/d4$sum.trees
+ggplot(d4, aes(dbhclass, sum(tprop), fill=d4$species))+geom_bar()+facet_wrap(d4$site)+theme(axis.title.x = element_text(size=25), axis.ticks.x = element_blank(), axis.text.x = element_text(size=20), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+labs(fill="Species")+xlab("Diameter Class")+ylab=("Proportion")
+
+
+ggplot(data, aes(x=dbhclass))+geom_bar(aes(y=..prop..*100), stat="count")+ylab("Percent of Sample") +facet_wrap(data$site) +xlab("Diameter Class")+theme(axis.title.x = element_text(size=25), axis.ticks.x = element_blank(), axis.text.x = element_text(size=20), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))+labs(fill="Species")
+#ggplot(data, aes(dbhclass))+geom_bar()+facet_grid(cols=vars(data$site), rows=vars(data$species))
+data=read.csv("fc1.csv")
+ggplot(data, aes(AveDBH))+geom_histogram(binwidth=1, aes(fill=data$Species))+facet_wrap(data$Site)+ggtitle("Average Plot-Level Species DBH Among Sites","1 Inch Classes")+xlab("Average DBH (in.)")+theme(axis.ticks.x=element_blank(), axis.ticks.y=element_blank())+scale_fill_discrete(name="Species")
+ggplot(bb, aes(dbhclass))+geom_bar()+facet_wrap(bb$species)+ggtitle("Bagley Bottoms Diameter Distribution by Species")
+ggplot(mlbc, aes(dbhclass))+geom_bar()+facet_wrap(mlbc$species)+ggtitle("McNally's Landing and Minnesota City Boat Club Diameter Distribution by Species")
+ggplot(gr, aes(dbhclass))+geom_bar()+facet_wrap(gr$species)+ggtitle("Great River Harbor Diameter Distribution by Species")
+ggplot(is, aes(dbhclass))+geom_bar()+facet_wrap(is$species)+ggtitle("Indian Slough Diameter Distribution by Species")
+ggplot(gi, aes(dbhclass))+geom_bar()+facet_wrap(gi$species)+ggtitle("Goose Island Diameter Distribution by Species")
+ggplot(lr, aes(dbhclass))+geom_bar()+facet_wrap(lr$species)+ggtitle("Lake Rebecca Diameter Distribution by Species")
+
+##Trees per acre vs. BA
+data=read.csv("IVBA.csv")
+data$TPA=data$Count*10
+acne=subset(data, Species=='ACNE')
+acsa=subset(data, Species=='ACSA')
+beni=subset(data, Species=='BENI')
+ceoc=subset(data, Species=='CEOC')
+frpe=subset(data, Species=='FRPE')
+pode=subset(data, Species=='PODE')
+qubi=subset(data, Species=='QUBI')
+quel=subset(data, Species=='QUEL')
+rops=subset(data, Species=='ROPS')
+ulam=subset(data, Species=='ULAM')
+tiam=subset(data, Species=='TIAM')
+bb=subset(data, Site=="Bagley")
+mlbc=subset(data, Site==c("McNally's Landing","MCBC"))
+gr=subset(data, Site=="Great River Harbor")
+is=subset(data, Site=="Indian Slough")
+gi=subset(data, Site=="Goose Island")
+lr=subset(data, Site=="Lake Rebecca")
+
+ggplot(data, aes(Site, Rich))+geom_violin()+geom_point()+ggtitle("Variations in Plot-Level Species Richness Among Sites")+theme(axis.ticks.x = element_blank())
+ggplot(data, aes(Site, Simp))+geom_violin()+geom_point()+ggtitle("Variations in Plot-Level Diversity Among Sites","Simpson's Diversity Index")+theme(axis.ticks.x = element_blank())
+ggplot(data, aes(Site, Shan))+geom_violin()+geom_point()+ggtitle("Variations in Plot-Level Diversity Among Sites","Shannon's Diversity Index")+theme(axis.ticks.x = element_blank())
+
+ggplot(data, aes(Total.TPA, Total.BA))+geom_point()+geom_smooth(method='lm')+facet_wrap(data$Site)
+test=lm(Total.BA~Total.TPA, data)
+summary(test)
+acsa=subset(data, Species=="ACSA")
+ggplot(acsa, aes(Total.TPA, Total.BA))+geom_point()+geom_smooth(method='lm')
+test=lm(Total.BA~Total.TPA, acsa)
+summary(test)
+test=lm(IV~Rich, acsa)
+summary(test)
+mast=subset(data, Species==c("QUEL","QUBI","TIAM"))
+ggplot(mast, aes(Total.TPA, Total.BA))+geom_point()+geom_smooth(method='lm')
+test=lm(Total.BA~Total.TPA, mast)
+summary(test)
+
+ggplot(acne, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Boxelder")
+ggplot(acsa, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Silver Maple")
+ggplot(beni, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("River Birch")
+ggplot(ceoc, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Hackberry")
+ggplot(frpe, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Green Ash")
+ggplot(pode, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Cottonwood")
+ggplot(qubi, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Swamp White Oak")
+ggplot(quel, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Pin Oak")
+ggplot(rops, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Black Locust")
+ggplot(ulam, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("American Elm")
+ggplot(tiam, aes(TPA, BA))+geom_point()+geom_smooth(method='lm')+ggtitle("Basswood")
+data=read.csv("1atable.2.csv")
+formattable(data)
+formattable(data, align =c("l","c","c","c","c", "c", "c", "c","c","c", "c"), list(`Site.Species` = formatter("span", style = ~ style(color = "grey",font.weight = "bold"))))
+```
+
+```{r 1b}
+##How does the distribution of ages vary within and among sites?
+data=read.csv("821data.csv")
+data=read.csv("821data2.csv")
+data$year=2017-data$age
+bb=subset(data, site=="Bagley Bottoms")
+mlbc=subset(data, site==c("McNally's Landing","MCBC"))
+gr=subset(data, site=="Great River Harbor")
+is=subset(data, site=="Indian Slough")
+gi=subset(data, site=="Goose Island")
+lr=subset(data, site=="Lake Rebecca")
+
+data=subset(data, Pith.Score==c('A','B'))
+dom=subset(data, class=='D')
+codom=subset(data, class=='C')
+int=subset(data, class=='I')
+sup=subset(data, class=='S')
+ggplot(data, aes(age, dbh))+geom_point()+geom_smooth(method='lm')+facet_wrap(data$species)+ggtitle("Age-Diameter Relationship By Species Across All Sites", "A/B Subset")
+ggplot(dom, aes(age, dbh))+geom_point()+geom_smooth(method='lm')+facet_wrap(dom$species)+ggtitle("Age-Diameter Relationship Among Species","Dominant Crown Class")
+ggplot(codom, aes(age, dbh))+geom_point()+geom_smooth(method='lm')+facet_wrap(codom$species)+ggtitle("Age-Diameter Relationship Among Species","Co-Dominant Crown Class")
+ggplot(int, aes(age, dbh))+geom_point()+geom_smooth(method='lm')+facet_wrap(int$species)+ggtitle("Age-Diameter Relationship Among Species","Intermediate Crown Class")
+ggplot(sup, aes(age, dbh))+geom_point()+geom_smooth(method='lm')+facet_wrap(sup$species)+ggtitle("Age-Diameter Relationship Among Species","Suppressed Crown Class")
+
+data=read.csv("CoreGradeSheet.csv")
+age=subset(data, Pith.Score==c("A","B"))
+
+ggplot(age, aes(Rings))+geom_histogram(binwidth=1, aes(fill=Spp))+facet_wrap(age$Site)+xlab("Age")+scale_fill_discrete("Species")+theme(axis.ticks.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=35), axis.text.y=element_text(size=20), strip.text.x = element_text(size=20))
+ggplot(age, aes(Spp, Rings))+geom_boxplot(aes(color=age$Spp))+facet_wrap(age$Site)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), axis.title.x = element_blank())+scale_color_discrete(name="Species")+ylab("Age (years)")+ggtitle("Species Age Distribution Among Sites", "Classes 'A' and 'B'")
+kruskal.test(age$Rings, age$Site)
+data=read.csv("821data.csv")
+kruskal.test(data$dbhclass,data$site)
+ggplot(age, aes(Rings))+geom_density()+facet_wrap(age$Site)
+```
+
+```{r 1c}
+##What is the relationship between species composition and age structure?
+data=read.csv("1c.csv")
+ggplot(data, aes(MedAge, Rich))+geom_point()+geom_smooth(method='lm')+ggtitle("Plot-Level Richness Over Median Plot Age")
+ggplot(data, aes(MedAge, Simp))+geom_point()+geom_smooth(method='lm')+ggtitle("Plot-Level Diversity (Simpson's) Over Median Plot Age")
+ggplot(data, aes(MedAge, Shan))+geom_point()+geom_smooth(method='lm')+ggtitle("Plot-Level Diversity (Shannon's) Over Median Plot Age")
+kruskal.test(data$MedAge, data$Rich)
+kruskal.test(data$MedAge, data$Site)
+kruskal.test(data$MedAge, data$Plot)
+
+data=read.csv("821data.csv")
+age=subset(data, Pith.Score==c("A","B"))
+pure=subset(age, comp=='pure')
+mixd=subset(age, comp=='mixed')
+ggplot(pure, aes(age))+geom_histogram(binwidth=1)
+ggplot(mixd, aes(age))+geom_histogram(binwidth=1)
+wilcox.test(pure$age, mixd$age)
+```
+
+Question 2: How do patterns of forest composition and structure relate to environmental conditions?
+
+```{r 2 bullet 1}
+#get bins
+data=read.csv("PlotEnvOrd.csv")
+data2=read.csv("PlotSumm2Ord.csv")
+data=merge(data, data2, by='Plot')
+bins=getJenksBreaks(data$MeanGSDur, k=5)
+ggplot(data, aes(data$MeanGSDur))+geom_histogram(binwidth=0.25)+ggtitle("Distribution of Plots Across Annual Inundation","0.25 Day Bins")
+bins=getJenksBreaks(data$MedEvDur, k=4)
+ggplot(data, aes(data$MedEvDur))+geom_histogram(binwidth=0.5)+ggtitle("Distribution of Plots Across Median Duration","0.5 Day Bins")
+bins=getJenksBreaks(data$FreqMean,k=4)
+ggplot(data, aes(data$FreqMean))+geom_histogram(binwidth=0.1)+ggtitle("Distribution of Plots Across Average Event Frequency","0.1 Binwidth")
+bins=c(0, 9, 16, 21, 30, 50)
+data$FC1=cut(data$MeanGSDur, bins, right=FALSE)
+data$FC1=bins[data$FC1]
+bins=c(0, 4, 9, 13, 15)
+data$durbin=cut(data$MedEvDur, bins, right=FALSE)
+data$durbin=bins[data$durbin]
+bins=c(0.108, 0.8,1.62, 3)
+data$fqbin=cut(data$FreqMean, bins, right=FALSE)
+data$fqbin=bins[data$fqbin]
+
+ggplot(data, aes(MedEvDur))+geom_histogram(binwidth = 0.5)
+
+#data=read.csv("1c.csv")
+#ggplot(data, aes(data$MeanGSDur))+geom_histogram(binwidth=0.25)+ggtitle("Distribution of Plots Across Annual Inundation","1 Day Bins")
+#ggplot(data, aes(data$MedDur))+geom_histogram(binwidth=1)+ggtitle("Distribution of Plots Across Median Duration","1 Day Bins")
+#ggplot(data, aes(data$AveFreq))+geom_histogram(binwidth=0.1)+ggtitle("Distribution of Plots Across Average Event Frequency","0.1 Binwidth")
+
+data=read.csv("alldata1015.2.csv")
+
+bins=c(0, 9, 16, 21, 30, 50)
+data$FC1=cut(data$AveInun, bins, right=FALSE)
+data$FC1=bins[data$FC1]
+
+#Flood Class IV
+data2=ddply(data, c("FC1","Species"),summarise,N=length(IV),mean=mean(IV),sd=sd(IV),se=sd/sqrt(N))
+data2$FC1=factor(data2$FC1, levels = c("0",'9','16','21','30'), labels = c("<9 days", "9-16 days", "16-21 days", "21-30 days", ">30 days"))
+ggplot(data2, aes(Species,mean/2))+geom_col(aes(fill=Species))+facet_wrap(data2$FC1)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())+theme(axis.title.x = element_blank(), axis.ticks.x = element_blank(), axis.text.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.y=element_text(size=15), strip.text.x = element_text(size=15))+ylab("Importance Value")+geom_errorbar(aes(ymin=(mean-se)/2, ymax=(mean+se)/2), width=0.5)
+
+#ggplot(data, aes(AveInun, X.TPA))+geom_point(aes(color=Species))+theme(axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.y=element_text(size=15), axis.ticks.x=element_blank(), axis.text.x=element_text(size=15), strip.text.x = element_text(size=15))+ylab("Percent of TPA")+xlab("Average Annual Days of Inundation")+ggtitle("Species Composition Varies Throughout a Gradient of Inundation")
+
+#Flood Class BA
+ggplot(data, aes(Species, BA))+geom_boxplot(aes(fill=Species))+facet_wrap(data$FC1)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+ggplot(data, aes(Species, X.BA))+geom_boxplot(aes(fill=Species))+facet_wrap(data$FC1)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+ggplot(data, aes(AveInun, X.BA))+geom_point()+geom_smooth(method='lm')+facet_wrap(data$Species)
+
+#Flood Class TPA
+ggplot(data, aes(Species, TPA))+geom_boxplot(aes(fill=Species))+facet_wrap(data$FC1)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+ggplot(data, aes(Species, X.TPA))+geom_boxplot(aes(fill=Species))+facet_wrap(data$FC1)+theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+ggplot(data, aes(AveInun, X.TPA))+geom_point()+geom_smooth(method='lm')+facet_wrap(data$Species)
+
+#Flood Days Simpson
+ggplot(data, aes(AveInun, Simp))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Diversity Decreases as Growing Season Flood Days Increase")+ylab("Simpson's Diversity Index")+xlab("Growing Season Flood Days")+theme(axis.ticks.x = element_blank(), axis.text.x=element_text(size=15), axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.y=element_text(size=15), strip.text.x = element_text(size=15))+xlab("Average Annual Inundation (Days)")
+indv=lm(AveInun~Simp, data)
+summary(indv)
+
+#Flood Days Shannon
+ggplot(data, aes(AveInun, Shan))+geom_point()
+
+#Flood Days Richness
+ggplot(data, aes(AveInun, Rich))+geom_point()
+
+ggplot(data, aes(AveInun, TPA))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Trees Per Acre v. Flood Days")+ylab("Trees Per Acre")+xlab("Average Growing Season Flood Days")
+tpfd=lm(data$AveInun~data$TPA)
+summary(tpfd)
+
+ggplot(data, aes(AveInun, BA))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Basal Area x GS Flood Days")+ylab("Basal Area")+xlab("Average Growing Season Flood Days")
+inba=lm(data$AveInun~data$BA)
+summary(inba)
+
+####################################################################################################SOMETHING IS WRONG WITH THESE BOXPLOTS AND I HATE IT
+#Median Duration
+bins=c(0, 4, 6, 9, 12, 15)
+data$durbin=cut(data$MedDur, bins, right=FALSE)
+data$durbin=bins[data$durbin]
+
+#Duration IV
+ggplot(data, aes(Species, IV/2))+geom_boxplot()+facet_wrap(data$durbin)+theme( axis.ticks.x=element_blank())
+
+#Duration BA
+ggplot(data, aes(Species, BA))+geom_boxplot()+facet_wrap(data$durbin)+theme( axis.ticks.x=element_blank())
+ggplot(data, aes(Species, X.BA))+geom_boxplot()+facet_wrap(data$durbin)+theme( axis.ticks.x=element_blank())
+
+#Duration TPA
+ggplot(data, aes(Species, TPA))+geom_boxplot()+facet_wrap(data$durbin)+theme( axis.ticks.x=element_blank())
+ggplot(data, aes(Species, X.TPA))+geom_boxplot()+facet_wrap(data$durbin)+theme( axis.ticks.x=element_blank())
+
+#Duration Simpson
+ggplot(data, aes(MedDur, Simp))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Event Duration Has Little Impact on Diversity")+ylab("Simpson's Diversity Index")+xlab("Median Event Duration")
+mddv=lm(data$MedDur~data$Simp)
+summary(mddv)
+
+#Duration Shannon
+ggplot(data, aes(MedDur, Shan))+geom_point()
+
+#Duration Richness
+ggplot(data, aes(MedDur, Rich))+geom_point()
+
+#Average Frequency
+bins=c(0.108, 0.8,1.62,2.523)
+data$fqbin=cut(data$AveFreq, bins, right=FALSE)
+data$fqbin=bins[data$fqbin]
+
+#Frequency IV
+ggplot(data, aes(Species, IV/2))+geom_boxplot()+facet_wrap(data$fqbin)
+
+#Frequency BA
+ggplot(data, aes(Species, BA))+geom_boxplot()+facet_wrap(data$fqbin)
+ggplot(data, aes(Species, X.BA))+geom_boxplot()+facet_wrap(data$fqbin)
+ggplot(data, aes(AveFreq, BA))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Basal Area x Average Event Frequency")+ylab("Basal Area")+xlab("Average Growing Season Flood Events")
+frba=lm(data$AveFreq~data$BA)
+summary(frba)
+
+#Frequency TPA
+ggplot(data, aes(Species, TPA))+geom_boxplot()+facet_wrap(data$fqbin)
+ggplot(data, aes(Species, X.TPA))+geom_boxplot()+facet_wrap(data$fqbin)
+
+#Frequency Simpson
+ggplot(data, aes(AveFreq, Simp))+geom_point()
+ggplot(data, aes(Simp))+geom_histogram(binwidth = 0.5)+facet_wrap(data$fqbin)
+ggplot(data, aes(AveFreq, Simp))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Diversity Declines as Flood Event Frequency Increases")+ylab("Simpson's Diversity Index")+xlab("Average Event Frequency")+theme(axis.ticks.x = element_blank(), axis.text.x=element_text(size=15), axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.y=element_text(size=15), strip.text.x = element_text(size=15))
+frdv=lm(AveFreq~Simp, data)
+summary(frdv)
+
+#Frequency Shannon
+ggplot(data, aes(AveFreq, Shan))+geom_point()
+ggplot(data, aes(Shan))+geom_histogram(binwidth = 0.5)+facet_wrap(data$fqbin)
+
+#Frequency Richness
+ggplot(data, aes(AveFreq, Rich))+geom_point()
+ggplot(data, aes(Rich))+geom_histogram(binwidth = 0.5)+facet_wrap(data$fqbin)
+
+
+#Relative Elevation
+ggplot(data, aes(BA, RelMn))+geom_point()+ylab("Relative Elevation")+xlab("Basal Area")+ggtitle("Plot Level Species Basal Area","Mean Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(IV, RelMn))+geom_point()+ylab("Relative Elevation")+xlab("Importance Value")+ggtitle("Plot Level Species Importance Value","Mean Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(Rich, RelMn))+geom_point()
+ggplot(data, aes(Simp, RelMn))+geom_point()
+
+#Relative Range
+ggplot(data, aes(BA, RelRng))+geom_point()+ylab("Range (ft.)")+xlab("Basal Area")+ggtitle("Plot Level Species Basal Area","Relative Elevation Range")+facet_wrap(data$Species)
+ggplot(data, aes(IV, RelRng))+geom_point()+ylab("Range (ft.)")+xlab("Importance Value")+ggtitle("Plot Level Species Importance Value","Relative Elevation Range")+facet_wrap(data$Species)
+ggplot(data, aes(Rich, RelRng))+geom_point()
+ggplot(data, aes(Simp, RelRng))+geom_point()
+
+#Relative Min
+ggplot(data, aes(BA, RelMin))+geom_point()+ylab("Relative Elevation")+xlab("Basal Area")+ggtitle("Plot Level Species Basal Area","Minimum Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(IV, RelMin))+geom_point()+ylab("Relative Elevation")+xlab("Importance Value")+ggtitle("Plot Level Species Importance Value","Minimum Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(Rich, RelMin))+geom_point()
+ggplot(data, aes(Simp, RelMin))+geom_point()
+
+#Relative Max
+ggplot(data, aes(BA, RelMax))+geom_point()+ylab("Relative Elevation")+xlab("Basal Area")+ggtitle("Plot Level Species Basal Area","Maximum Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(IV, RelMax))+geom_point()+ylab("Relative Elevation")+xlab("Importance Value")+ggtitle("Plot Level Species Importance Value","Maximum Relative Elevation")+facet_wrap(data$Species)
+ggplot(data, aes(RelMax, Rich))+geom_point()
+ggplot(data, aes(RelMax, Simp))+geom_point()
+
+##Silver maple
+acsa=subset(data, Species=='ACSA')
+acsa=subset(data, acsa.tpa>0)
+ggplot(acsa , aes(acsa.ba, Rich))+geom_point()+geom_smooth(method = 'lm')+ggtitle("Species Richness Declines as silver maple Dominance Increase")+xlab("Proportion silver maple")+ylab("Species Richness")
+ggplot(acsa , aes(acsaiv/2, Rich))+geom_point()+geom_smooth(method = 'lm')+xlab("Silver Maple IV")+ylab("Species Richness")+theme(axis.ticks.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.x=element_text(size=15), axis.text.y=element_text(size=15), strip.text.x = element_text(size=15))
+ggplot(acsa , aes(MeanGSDur, acsaiv/2))+geom_point()+geom_smooth(method = 'lm')+ylab("Silver Maple IV")+xlab("Annual Growing Season Flood Days")+theme(axis.ticks.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=20), title=element_text(size=30), axis.text.x=element_text(size=15), axis.text.y=element_text(size=15), strip.text.x = element_text(size=15))
+sbar=lm(acsa.ba~Rich, acsa)
+summary(sbar)
+sivr=lm(acsaiv~Rich, acsa)
+summary(sivr)
+test=lm(MeanGSDur~acsaiv, acsa)
+summary(test)
+test=lm(MeanGSDur~RelMean, data)
+summary(test)
+
+##hard mast
+mast=subset(data, Species==c('QUEL','QUBI','TIAM'))
+ggplot(mast, aes(IV, Rich))+geom_point()
+ggplot(mast, aes(X.BA, Rich))+geom_point()
+ggplot(mast, aes(AveInun, X.BA))+geom_point()
+ggplot(mast, aes(AveInun, IV))+geom_point()
+ggplot(mast, aes(Total.TPA, IV))+geom_point()
+ggplot(mast, aes(IV, RelMn))+geom_point()
+ggplot(mast, aes(IV, RelMax))+geom_point()
+ggplot(mast, aes(IV, RelRng))+geom_point()
+ggplot(mast, aes(X.BA, RelMn))+geom_point()
+
+test=lm(IV~Rich, mast)
+summary(test)
+test=lm(X.BA~Rich, mast)
+summary(test)
+test=lm(X.BA~AveInun, mast)
+summary(test)
+test=lm(AveInun~IV, mast)
+summary(test)
+test=lm(RelMn~BA, mast)
+summary(test)
+ggplot(mast, aes(BA, RelMn))+geom_point()+geom_smooth(method='lm')
+test=lm(RelMn~X.TPA, mast)
+summary(test)
+test=lm(RelMax~IV, mast)
+summary(test)
+ggplot(mast, aes(IV, RelMax))+geom_point()+geom_smooth(method='lm')
+test=lm(RelMax~X.BA, mast)
+summary(test)
+ggplot(mast, aes(X.BA, RelMax))+geom_point()+geom_smooth(method='lm')
+test=lm(RelRng~X.BA, mast)
+summary(test)
+ggplot(mast, aes(RelRng,X.BA*100))+geom_point()+geom_smooth(method='lm')+xlab("Relative Elevation Range (ft.)")+ylab("Percent of Basal Area")+theme(axis.ticks.x = element_blank(), axis.ticks.y=element_blank(), axis.title.y= element_text(size=25), title=element_text(size=30), axis.text.x=element_text(size=15), axis.text.y=element_text(size=15), strip.text.x = element_text(size=20))
+test=lm(RelMin~IV, mast)
+summary(test)
+ggplot(mast, aes(IV, RelMin))+geom_point()+geom_smooth(method='lm')
+test=lm(RelRng~IV, mast)
+summary(test)
+ggplot(mast, aes(IV, RelRng))+geom_point()+geom_smooth(method='lm')
+```
+
+```{r 2 bullet 2}
+data=read.csv("821data116.csv")
+bins=seq(0, 50, 10)
+data$FC1=cut(data$AveInun, bins, right=FALSE)
+data$FC1=bins[data$FC1]
+
+ggplot(data, aes(dbhclass))+stat_ecdf(geom='smooth')+facet_wrap(data$FC1)+ylab("Cumulative Frequency")+xlab("DBH (1 in. Classes)")+ggtitle("Diameter Frequency Distribution Among Annual Inundation","10-Day Classes")
+
+ggplot(data, aes(dbhclass))+stat_ecdf(geom='smooth')+facet_wrap(data$durbin)+ylab("Cumulative Frequency")+xlab("Diameter Class (inches)")+ggtitle("Median Event Duration")
+
+ggplot(data, aes(dbhclass))+stat_ecdf(geom='smooth')+facet_wrap(data$fqbin)+ylab("Cumulative Frequency")+xlab("Diameter Class (inches)")+ggtitle("Average Event Frequency")
+
+age=subset(data, Pith.Score==c('A','B'))
+
+ggplot(age, aes(age))+stat_ecdf(geom='smooth')+facet_wrap(age$FC1)+ylab("Cumulative Frequency")+xlab("Age (years)")+ggtitle("10-Day Flood Classes")
+
+ggplot(age, aes(age))+stat_ecdf(geom='smooth')+facet_wrap(age$durbin)+ylab("Cumulative Frequency")+xlab("Age (years)")+ggtitle("Median Event Duration")
+
+ggplot(age, aes(age))+stat_ecdf(geom='smooth')+facet_wrap(age$fqbin)+ylab("Cumulative Frequency")+xlab("Age (years)")+ggtitle("Average Event Frequency")
+
+ggplot(data, aes(Rich))+stat_ecdf(geom='smooth')+facet_wrap(data$FC1)+ylab("Cumulative Frequency")+xlab("")+ggtitle("10-Day Flood Classes")
+
+ggplot(data, aes(Rich))+stat_ecdf(geom='smooth')+facet_wrap(data$durbin)+ylab("Cumulative Frequency")+xlab("")+ggtitle("Median Event Duration")
+
+ggplot(data, aes(Rich))+stat_ecdf(geom='smooth')+facet_wrap(data$fqbin)+ylab("Cumulative Frequency")+xlab("")+ggtitle("Average Event Frequency")
+
+```
+
+```{r 2 bullet 3}
+
+```
+
+Question 3: How does growth rate vary within and among stands of mixed-silver maple forests in the Upper Mississippi River floodplain across a gradient of environmental conditions?
+
+```{r 3a}
+##What is the relationship between diameter and BH age across an environmental gradient?
+```
+
+```{r 3b}
+##What is the relationship between radial growth and BH age across an environmental gradient?
+```

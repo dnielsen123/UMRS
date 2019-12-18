@@ -1,0 +1,93 @@
+"","Site","Plot","Tree..","Species","Pith.Score","Match.Score","Core.Condition","Notes","X.1"
+"7","Bagley Bottoms",4,7,"SM","A","C","A","",NA
+"17","Bagley Bottoms",5,2,"SM","A","B","A","",NA
+"19","Bagley Bottoms",5,4,"SM","A","C","B","",NA
+"29","Bagley Bottoms",10,3,"HB","A","B","B","",NA
+"31","Bagley Bottoms",10,5,"SWO","A","A","B","",NA
+"35","Bagley Bottoms",8,1,"SM","A","C","A","",NA
+"37","Bagley Bottoms",8,3,"SM","A","B","A","",NA
+"45","Bagley Bottoms",7,2,"ASH","A","A","A","",NA
+"50","Bagley Bottoms",7,7,"SM","A","C","A","",NA
+"53","Bagley Bottoms",7,10,"AE","A","A","A","",NA
+"57","Bagley Bottoms",9,1,"SM","A","C","C","",NA
+"63","Bagley Bottoms",9,7,"AE","A","A","B","",NA
+"64","Bagley Bottoms",9,8,"SM","A","C","B","",NA
+"70","Bagley Bottoms",9,14,"SM","A","C","A","",NA
+"78","Bagley Bottoms",2,3,"SM","A","C","A","",NA
+"79","Bagley Bottoms",2,4,"AE","A","B","A","",NA
+"81","Bagley Bottoms",2,6,"SM","A","A","A","",NA
+"86","Bagley Bottoms",2,11,"AE","A","C","A","",NA
+"98","Bagley Bottoms",3,10,"AE","A","B","A","",NA
+"111","Bagley Bottoms",1,7,"SM","A","B","B","",NA
+"121","Goose Island",2,4,"SM","A","C","A","",NA
+"128","Goose Island",2,11,"SM","A","C","C","",NA
+"130","Goose Island",2,13,"SM","A","A","B","",NA
+"136","Goose Island",5,1,"ASH","A","B","A","",NA
+"143","Goose Island",9,1,"SM","A","C","B","",NA
+"146","Goose Island",9,4,"ASH","A","","B","",NA
+"152","Goose Island",9,10,"ASH","A","A","B","",NA
+"153","Goose Island",9,11,"ASH","A","B","A","",NA
+"163","Goose Island",14,1,"ASH","A","B","B","",NA
+"164","Goose Island",14,2,"SWO","A","A","A","",NA
+"169","Goose Island",14,7,"ASH","A","B","A","",NA
+"180","Goose Island",13,2,"OAK","A","C","B","",NA
+"181","Goose Island",13,3,"OAK","A","B","B","",NA
+"203","Goose Island",4,5,"ASH","A","B","B","",NA
+"205","Goose Island",15,2,"RB","A","","A","ash",NA
+"210","Goose Island",15,7,"RB","A","A","A","",NA
+"220","Great River Harbor",1,1,"SM","A","B","A","",NA
+"222","Great River Harbor",1,3,"SM","A","B","B","",NA
+"227","Great River Harbor",1,8,"SM","A","C","B","",NA
+"228","Great River Harbor",1,9,"ASH","A","B","B","",NA
+"231","Great River Harbor",1,12,"AE","A","C","B","ash",NA
+"237","Great River Harbor",2,4,"BE","A","A","B","",NA
+"238","Great River Harbor",2,5,"ASH","A","","B","",NA
+"240","Great River Harbor",2,7,"SM","A","","A","",NA
+"247","Great River Harbor",3,2,"SM","A","B","A","",NA
+"282","Indian Slough",3,8,"HB","A","","B","",NA
+"284","Indian Slough",3,10,"HB","A","B","C","",NA
+"285","Indian Slough",3,11,"HB","A","C","B","",NA
+"288","Indian Slough",4,3,"SM","A","B","B","",NA
+"291","Indian Slough",4,6,"SM","A","A","A","",NA
+"292","Indian Slough",4,7,"SM","A","C","B","",NA
+"295","Indian Slough",4,10,"HB","A","B","A","",NA
+"296","Indian Slough",1,1,"RB","A","C","A","",NA
+"297","Indian Slough",1,2,"HB","A","A","B","",NA
+"298","Indian Slough",1,3,"RB","A","A","B","",NA
+"299","Indian Slough",1,4,"RB","A","B","A","",NA
+"304","Indian Slough",1,9,"HB","A","B","B","",NA
+"327","Lake Rebecca",2,1,"SM","A","","B","",NA
+"330","Lake Rebecca",2,4,"SM","A","","A","",NA
+"332","Lake Rebecca",2,6,"ASH","A","A","B","",NA
+"333","Lake Rebecca",2,7,"SM","A","B","B","",NA
+"335","Lake Rebecca",2,9,"SM","A","C","C","",NA
+"337","Lake Rebecca",2,11,"SM","A","","B","ash",NA
+"340","Lake Rebecca",2,14,"SM","A","C","C","",NA
+"341","Lake Rebecca",2,15,"SM","A","C","A","",NA
+"345","Lake Rebecca",2,19,"SM","A","B","C","",NA
+"349","Lake Rebecca",2,23,"SM","A","B","B","",NA
+"351","Lake Rebecca",2,25,"SM","A","C","A","",NA
+"363","Lake Rebecca",3,7,"ASH","A","C","C","",NA
+"366","Lake Rebecca",3,10,"SM","A","C","B","",NA
+"371","Lake Rebecca",3,15,"SM","A","B","C","",NA
+"373","Lake Rebecca",3,17,"SM","A","B","B","",NA
+"374","Lake Rebecca",3,18,"SM","A","C","C","",NA
+"379","Lake Rebecca",4,1,"SM","A","C","B","",NA
+"385","Lake Rebecca",4,7,"AE","A","B","B","",NA
+"387","Lake Rebecca",4,9,"ASH","A","A","A","",NA
+"389","Lake Rebecca",4,11,"SM","A","B","B","",NA
+"391","Lake Rebecca",4,13,"ASH","A","A","B","",NA
+"393","Lake Rebecca",4,15,"SM","A","B","C","",NA
+"394","Lake Rebecca",4,16,"ASH","A","B","B","elm",NA
+"396","Lake Rebecca",4,18,"ASH","A","A","C","",NA
+"397","Lake Rebecca",4,19,"ASH","A","A","C","",NA
+"404","Lake Rebecca",5,5,"SM","A","C","C","",NA
+"410","Lake Rebecca",5,11,"SM","A","C","B","",NA
+"420","McNally's Landing",2,10,"HB","A","C","A","ash",NA
+"426","McNally's Landing",1,4,"ASH","A","A","A","",NA
+"428","McNally's Landing",1,6,"ASH","A","B","A","",NA
+"429","McNally's Landing",1,7,"ASH","A","C","C","",NA
+"433","McNally's Landing",1,11,"ASH","A","A","A","",NA
+"434","McNally's Landing",1,12,"ASH","A","B","A","",NA
+"450","Minnesota City Boat Club",2,10,"CW","A","A","A","elm",NA
+"455","Minnesota City Boat Club",1,3,"ASH","A","B","A","",NA
